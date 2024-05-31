@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Color change</title>
+        <style>
+            *{font-size: 35px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Click & Change the Color</h1>
+            <form onsubmit="colorme()">
+                <input type="submit" value="Change the Color">
+            </form>
+            <script>
+                function colorme(){
+                    event.preventDefault();
+                    let colors = ["red", "green", "purple", "pink", "purple", "brown", "pink"];
+                    let r = parseInt(Math.random()*colors.length)
+                    document.body.style.background = colors[r];
+                }
+            </script>
+        </center>
+    </body>
+</html>
